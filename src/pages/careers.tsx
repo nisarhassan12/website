@@ -6,7 +6,6 @@ import IndexLayout from '../layouts'
 import Logos from '../components/Logos';
 import GitGraph from '../components/GitGraph';
 import { colors, breakpoints } from '../styles/variables';
-import {UnderLine} from '../styles/typography';
 import styled from '@emotion/styled';
 import { getEmSize } from '../styles/mixins';
 
@@ -106,8 +105,7 @@ const CareersPage: React.SFC<{}> = () => (
                 ]} />
                 <div style={{ marginTop: 60 }}>
                     <h4 style={{ color: colors.fontColor2 }}>We're hiring!</h4>
-                    <h1>Join the Gitpod team</h1>
-                    <UnderLine/>
+                    <h1 className='underlined'>Join the Gitpod team</h1>
                 </div>
                 <p style={{ marginBottom: 170 }} >
                     Gitpod aims to make development better for everyone, and it's built on a culture of trust and empathy. Help us shape its future!

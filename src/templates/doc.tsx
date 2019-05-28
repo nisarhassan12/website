@@ -170,7 +170,6 @@ function onSelectTopic(event: React.FormEvent<HTMLSelectElement>) {
 
 export const DocTopicChooser: React.SFC<DocTopicChooserProps> = () => {
     return (
-        <div>
             <select className='secondary' onChange={onSelectTopic}>
             <option value='#' selected={true}>Select A Topic</option>
             {MENU.map(m => {
@@ -184,7 +183,6 @@ export const DocTopicChooser: React.SFC<DocTopicChooserProps> = () => {
                 </>
             })}
         </select>
-        </div>
     )
 }
 

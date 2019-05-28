@@ -96,7 +96,7 @@ export default class PricingPage extends React.Component<{}, {}> {
                                     'Unlimited Workspaces',
                                     'Public Repositories'
                                 ]}
-                                rel="noreferrer"
+
                                 link="https://gitpod.io/login" />
                             <PricingBox
                                 title="Personal"
@@ -113,7 +113,7 @@ export default class PricingPage extends React.Component<{}, {}> {
                                     'Private & Public Repos',
                                     'Non-commercial use only'
                                 ]}
-                                rel="noreferrer"
+
                                 link="https://gitpod.io/subscription" />
                             <PricingBox
                                 title="Unlimited"
@@ -129,7 +129,7 @@ export default class PricingPage extends React.Component<{}, {}> {
                                     'Unlimited Workspaces',
                                     'Private & Public Repos'
                                 ]}
-                                rel="noreferrer"
+
                                 link="https://gitpod.io/subscription" />
                         </PricingOptions>
                     </div>
@@ -150,7 +150,7 @@ export default class PricingPage extends React.Component<{}, {}> {
                         <p>
                             Manage one plan for your entire team from a single account.
                         </p>
-                        <a href="https://gitpod.io/teams" rel="noreferrer">
+                        <a href="https://gitpod.io/teams">
                             <button className="primary">Gitpod for teams</button>
                         </a>
                     </Box>
@@ -260,7 +260,6 @@ interface PricingBoxProps {
     features: string[];
     image?: JSX.Element;
     link: string;
-    rel: string;
 }
 
 class PricingBox extends React.Component<PricingBoxProps, {}> {

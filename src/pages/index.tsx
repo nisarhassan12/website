@@ -8,8 +8,7 @@ import ModalVideo from 'react-modal-video';
 import 'react-modal-video/css/modal-video.min.css'
 import { colors, breakpoints } from '../styles/variables';
 import { getEmSize } from '../styles/mixins';
-import {UnderLine} from '../styles/typography';
-import TweetEmbed from 'react-tweet-embed'
+import TweetEmbed from 'react-tweet-embed';
 import BrowserExtension from '../resources/browser-ext.png';
 import ExampleBox from '../components/ExampleBox';
 import Python from '../resources/Logo_Python.svg';
@@ -145,7 +144,7 @@ const WhyBox = styled.div`
     }
 `;
 
-const ResponsiveTweet = styled.blockquote`
+const ResponsiveTweet = styled.div`
     position: absolute;
     width: 435px;
 
@@ -199,7 +198,7 @@ export default class IndexPage extends React.Component<{}, IndexPageState> {
             <div className='flex hidden-md-down' style={{ zIndex: 99 }}>
                 {
                     [0, 1, 2].map(idx =>
-                        (<div key={'menu_'+idx} style={{ cursor: 'pointer', paddingTop: 30 }} onClick={() => this.setState({ worksMode: idx })}>
+                        (<div key={'menu_' + idx} style={{ cursor: 'pointer', paddingTop: 30 }} onClick={() => this.setState({ worksMode: idx })}>
                             <h3 style={{ paddingRight: 60, color: this.state.worksMode === idx ? colors.fontColor1 : colors.fontColor2 }} >{modes[idx]}</h3>
                         </div>))
                 }
@@ -223,9 +222,9 @@ export default class IndexPage extends React.Component<{}, IndexPageState> {
                             src={BrowserExtension}
                             alt="Browser Extension"
                         />
-                        <div className='browser-extension-description' style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                        <div className='browser-extension-description' style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <p>The browser extension adds a button to every GitHub repository, issue and pull request. So you don't have to prefix manually.</p>
-                            <button className='primary' style={{ minWidth: 200 }} onClick={()=>{
+                            <button className='primary' style={{ minWidth: 200 }} onClick={() => {
                                 window.open(this.getBrowserExtension(), '_blank');
                             }}>Get Browser Extension</button>
                         </div>
@@ -235,7 +234,7 @@ export default class IndexPage extends React.Component<{}, IndexPageState> {
                             <div>
                                 <h3>Install the GitHub app</h3>
                                 <p>Like Continuous Integration, the GitHub App detects changes in your repository and starts preparing workspaces. By the time your team starts to code, all dependencies are preinstalled, and the code is already compiled.</p>
-                                <a href='https://github.com/marketplace/gitpod-io' target='_blank' rel="noreferrer"><button className='primary' style={{ minWidth: 200 }}>GitHub Marketplace</button></a>
+                                <a href='https://github.com/marketplace/gitpod-io' target='_blank'><button className='primary' style={{ minWidth: 200 }}>GitHub Marketplace</button></a>
                             </div>
                             <img
                                 className='hidden-md-down'
@@ -253,7 +252,7 @@ export default class IndexPage extends React.Component<{}, IndexPageState> {
             <div className='flex hidden-md-down' style={{ justifyContent: 'center' }}>
                 {
                     [0, 1, 2].map(idx =>
-                        (<div key={'_'+idx} onClick={() => this.setState({ worksMode: idx })} style={{ cursor: 'pointer' }}>
+                        (<div key={'_' + idx} onClick={() => this.setState({ worksMode: idx })} style={{ cursor: 'pointer' }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" style={{ margin: 3 }}>
                                 <circle cx="5" cy="5" r="5" fill={this.state.worksMode === idx ? colors.fontColor1 : colors.fontColor2} />
                             </svg>
@@ -276,9 +275,9 @@ export default class IndexPage extends React.Component<{}, IndexPageState> {
                     <div style={{ zIndex: 99, position: "fixed", top: 50, left: 'auto' }}>
                         <ModalVideo channel='youtube'
                             youtube={{
-                              autoplay: 1,
-                              cc_load_policy: 1,
-                              theme: 'dark'
+                                autoplay: 1,
+                                cc_load_policy: 1,
+                                theme: 'dark'
                             }}
                             isOpen={this.state.isOpen}
                             videoId='bFZMKpDV3GQ'
@@ -286,8 +285,7 @@ export default class IndexPage extends React.Component<{}, IndexPageState> {
                     </div>
                     <GitpodHeader>
                         <h2 style={{ color: colors.fontColor2, marginBottom: 15 }}>Frictionless Coding</h2>
-                        <h1 style={{ fontSize: '2.4em' }}>One-Click Online IDE<br /> for GitHub</h1>
-                        <UnderLine />
+                        <h1 style={{ fontSize: '2.4em'}} className='underlined'>One-Click Online IDE<br /> for GitHub</h1>
                         <p>Gitpod launches ready-to-code dev environments from any GitHub page.</p>
                     </GitpodHeader>
                     <VideoLaptop>

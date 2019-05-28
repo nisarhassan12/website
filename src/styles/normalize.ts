@@ -152,8 +152,6 @@ export default `
     background-size: 20px;
   }
 
-
-
   blockquote {
     margin: .8rem 0;
     padding: .5rem 1rem;
@@ -339,4 +337,16 @@ export default `
         }
     }
   }
+
+    .underlined {
+        &::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 95px;
+            margin: 30px 0;
+            background: ${colors.brand};
+        }
+    }
+
 `
